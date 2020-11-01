@@ -48,7 +48,6 @@ export class LandingPageComponent implements OnInit {
       });
   }
 
-
   public createQuery(params) {
     let tree = this.router.createUrlTree([], { queryParams: params });
     return this.serializer.serialize(tree);
