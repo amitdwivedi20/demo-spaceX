@@ -23,7 +23,7 @@ export class FiltersComponent implements OnInit {
     },
     {
       displayText: '2008',
-      value: 2006
+      value: 2008
     },
     {
       displayText: '2009',
