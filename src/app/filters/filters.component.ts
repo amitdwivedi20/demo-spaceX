@@ -110,20 +110,20 @@ export class FiltersComponent implements OnInit {
 
   public onYearFilter(val, index): void {
     this.selectedIndex = this.getSelectedIndex(index, this.selectedIndex);
-    this.filterModel.launch_Year = this.selectedIndex !== -1 ? val : '';
+    this.filterModel.launchYear = this.selectedIndex !== -1 ? val : '';
     this.spacexService.setMessageForFilter(this.filterModel);
   }
 
 
   onlaunchSuccessFilter(val, iLaunchSuccess): void {
     this.selectedlaunchIndex = this.getSelectedIndex(iLaunchSuccess, this.selectedlaunchIndex);
-    this.filterModel.launch_Success = this.selectedlaunchIndex !== -1 ? val : '';
+    this.filterModel.launchSuccess = this.selectedlaunchIndex !== -1 ? val : '';
     this.spacexService.setMessageForFilter(this.filterModel);
   }
 
   onlandSuccessFilter(val, iLandSuccess): void {
     this.selectedLandIndex = this.getSelectedIndex(iLandSuccess, this.selectedLandIndex);
-    this.filterModel.land_Success = this.selectedLandIndex !== -1 ? val : '';
+    this.filterModel.landSuccess = this.selectedLandIndex !== -1 ? val : '';
     this.spacexService.setMessageForFilter(this.filterModel);
   }
 

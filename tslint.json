@@ -4,6 +4,7 @@
     "codelyzer"
   ],
   "rules": {
+    "forin": false,
     "align": {
       "options": [
         "parameters",
