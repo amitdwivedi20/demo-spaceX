@@ -20,7 +20,6 @@ import { ItemComponent } from './item/item.component';
     HttpClientModule
   ],
   providers: [],
-  entryComponents: [FiltersComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
