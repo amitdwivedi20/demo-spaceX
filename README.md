@@ -38,6 +38,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/31080020/97808151-3929ba80-1c8b-11eb-8c2e-0112260a92cf.png)
 
 ## Approach Used
-Application is being rendered server side using Angualr universal technique.
-Root app i.e. `app.component.ts` is responsible for loading both the `landing-page` and `Filter` side by side. Filter component emits the values selected by the user which is received by landing-page which in turn calls the service and gets the desired data.
-Each item of the dataSet is sent to `item` component which renders card view. Url is being updated by using router.
+Application is being rendered server side using Angular Universal. Root app i.e. `app.component.ts` is responsible for loading both the `landing-page` and `Filter` side by side. Filter component emits  the values selected by the user using angular `subscription` which is received by landing-page which in turn calls the service and gets the desired data.
+Each item of the dataSet is binding to `@Input` of  `item` component which renders card view.Deafult route is `landing-page`. Url is being updated by using router.
+Mobile first approach has been using for styling of the application. `Overflow-y: scroll` is added for item-info as `missionIds` is a list and length of the container will be inconsistent.
