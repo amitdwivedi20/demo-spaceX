@@ -1,7 +1,7 @@
 export class FilterModel {
-    public launch_Year: number;
-    public launch_Success: boolean;
-    public land_Success: boolean;
+    public launch_year: number;
+    public launch_success: boolean;
+    public land_success: boolean;
     public limit = 100;
 }
 
