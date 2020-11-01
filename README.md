@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Mobile View
+
+![image](https://user-images.githubusercontent.com/31080020/97808109-d59f8d00-1c8a-11eb-9276-69928e6aa587.png)
+
+## Desktop View
+![image](https://user-images.githubusercontent.com/31080020/97808141-0ed7fd00-1c8b-11eb-8312-70c7bf103acd.png)
+
+## Filters on query params
+![image](https://user-images.githubusercontent.com/31080020/97808151-3929ba80-1c8b-11eb-8c2e-0112260a92cf.png)
+
+## Approach Used
+Application is being rendered server side using Angualr universal technique.
+Root app i.e. `app.component.ts` is responsible for loading both the `landing-page` and `Filter` side by side. Filter component emits the values selected by the user which is received by landing-page which in turn calls the service and gets the desired data.
+Each item of the dataSet is sent to `item` component which renders card view. Url is being updated by using router.
