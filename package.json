@@ -16,7 +16,6 @@
     "postinstall": "npm run build:ssr"
   },
   "private": true,
-
   "dependencies": {
     "@angular/animations": "~10.1.1",
     "@angular/cli": "^10.2.0",

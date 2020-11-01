@@ -10,21 +10,21 @@ import { Subject } from 'rxjs/internal/Subject';
 })
 export class SpacexService {
   private subjectActionFilter = new Subject<any>();
-  
+
   constructor(private http: HttpClient) { }
-  
+
   public baseuri = 'https://api.spacexdata.com/v3/launches';
 
 
-  getAll(params): Observable<any>{
+  public getAll(params): Observable<any> {
     return this.http.get(this.baseuri + params);
   }
 
 
-  setMessageForFilter(message: any) {
+  public setMessageForFilter(message: any): void {
     this.subjectActionFilter.next({ value: message });
   }
-  getMessageForFilter(): Observable<any> {
+  public getMessageForFilter(): Observable<any> {
     return this.subjectActionFilter.asObservable();
   }
 }

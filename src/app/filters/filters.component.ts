@@ -4,7 +4,7 @@ import { SpacexService } from '../service/spacex.service';
 import { FilterModel, LaunchStatus, LaunchYear } from './filter.model';
 
 @Component({
-  selector: 'filters',
+  selector: 'app-filters',
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.css']
 })
@@ -101,8 +101,6 @@ export class FiltersComponent implements OnInit {
   public selectedlaunchIndex: number;
   public selectedLandIndex: number;
   public filterModel: FilterModel;
-
-  
   constructor(private spacexService: SpacexService) {
     this.filterModel = new FilterModel();
   }
@@ -110,31 +108,34 @@ export class FiltersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public onYearFilter(val, index) {
+  public onYearFilter(val, index): void {
     this.selectedIndex = this.getSelectedIndex(index, this.selectedIndex);
-    this.filterModel.launch_year = this.selectedIndex !== -1 ? val : '';
+    this.filterModel.launch_Year = this.selectedIndex !== -1 ? val : '';
     this.spacexService.setMessageForFilter(this.filterModel);
   }
 
 
-  onlaunchSuccessFilter(val, iLaunchSuccess) {
+  onlaunchSuccessFilter(val, iLaunchSuccess): void {
     this.selectedlaunchIndex = this.getSelectedIndex(iLaunchSuccess, this.selectedlaunchIndex);
-    this.filterModel.launch_success = this.selectedlaunchIndex !== -1 ? val : '';
-    this.spacexService.setMessageForFilter(this.filterModel)
+    this.filterModel.launch_Success = this.selectedlaunchIndex !== -1 ? val : '';
+    this.spacexService.setMessageForFilter(this.filterModel);
   }
 
-  onlandSuccessFilter(val, iLandSuccess) {
+  onlandSuccessFilter(val, iLandSuccess): void {
     this.selectedLandIndex = this.getSelectedIndex(iLandSuccess, this.selectedLandIndex);
-    this.filterModel.land_success = this.selectedLandIndex !== -1 ? val : '';
-    this.spacexService.setMessageForFilter(this.filterModel)
+    this.filterModel.land_Success = this.selectedLandIndex !== -1 ? val : '';
+    this.spacexService.setMessageForFilter(this.filterModel);
   }
 
 
-  getSelectedIndex(currentIndex, prevIndex) {
-    if (currentIndex !== prevIndex)
+  getSelectedIndex(currentIndex, prevIndex): number {
+    if (currentIndex !== prevIndex) {
       return currentIndex;
-    else
+    }
+    else {
       return -1;
+    }
+
   }
 
 }
