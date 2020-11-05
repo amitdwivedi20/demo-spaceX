@@ -1,37 +1,51 @@
-
 <div class="filter" id="spacex-filter">
-    <label>Filters</label> 
-    <div class="item-info-title"> <label >Launch Year</label></div>    
+    <label class="filter-heading-lable">Filters</label>
+    <div class="item-info-title">
+        <div class="label-wrapper"><label>Launch Year</label> </div>
+    </div>
     <div class="item-info">
-        <div class="row display-table" >
-            <div class=" "  *ngFor="let year of launchYear; let i = index;">
-                <div class="button-wrapper">
-                    <button [ngClass]="{'active': selectedIndex == i}" class="filter-buttton" (click)="onYearFilter(year.value,i)">{{year.displayText}}</button>
+        <div class="row display-table">
+            <div class="button-wrapper col-6 col-s-6 col-lg-6" *ngFor="let year of launchYear; let i = index;">
+                <div>
+                    <button [ngClass]="{'active': selectedIndex == i}" class="filter-buttton"
+                        (click)="onYearFilter(year.value,i)">{{year.displayText}}</button>
                 </div>
-            </div>        
+            </div>
+        </div>
+
     </div>
-        
-    </div>
-    <div class="item-info-title"><label>Successful Launch</label></div>
-    
-    <div class="item-info">
-        <div class="row display-table" >
-        <div class=" " *ngFor="let year of launchSuccess; let iLaunchSuccess = index;">       
-        <div class="button-wrapper" >
-            <button [ngClass]="{'active': selectedlaunchIndex == iLaunchSuccess}" class="filter-buttton" (click)="onlaunchSuccessFilter(year.value,iLaunchSuccess)">{{year.displayText}}</button>
+    <div class="item-info-title">
+        <div class="label-wrapper">
+            <label>Successful Launch</label>
         </div>
     </div>
-    </div> 
-    </div>
-    <div class="item-info-title"> <label>Successful Landing</label></div>
-   
+
     <div class="item-info">
-        <div class="row display-table" >
-        <div class=" " *ngFor="let year of landingSuccess; let iLandSuccess = index;">
-        <div class="button-wrapper" >
-            <button [ngClass]="{'active': selectedLandIndex == iLandSuccess}" class="filter-buttton" (click)="onlandSuccessFilter(year.value,iLandSuccess)">{{year.displayText}}</button>
+        <div class="row display-table">
+            <div class="button-wrapper col-6 col-s-6 col-lg-6"
+                *ngFor="let year of launchSuccess; let iLaunchSuccess = index;">
+                <div>
+                    <button [ngClass]="{'active': selectedlaunchIndex == iLaunchSuccess}" class="filter-buttton"
+                        (click)="onlaunchSuccessFilter(year.value,iLaunchSuccess)">{{year.displayText}}</button>
+                </div>
+            </div>
         </div>
     </div>
-    </div>          
+    <div class="item-info-title">
+        <div class="label-wrapper">
+            <label>Successful Landing</label>
+        </div>
+    </div>
+
+    <div class="item-info">
+        <div class="row display-table">
+            <div class="button-wrapper col-6 col-s-6 col-lg-6"
+                *ngFor="let year of landingSuccess; let iLandSuccess = index;">
+                <div>
+                    <button [ngClass]="{'active': selectedLandIndex == iLandSuccess}" class="filter-buttton"
+                        (click)="onlandSuccessFilter(year.value,iLandSuccess)">{{year.displayText}}</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
