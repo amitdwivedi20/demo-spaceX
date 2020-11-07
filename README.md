@@ -31,16 +31,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/31080020/98221825-23134700-1f76-11eb-97ca-42217ea8e653.png)
 ![image](https://user-images.githubusercontent.com/31080020/98221906-36bead80-1f76-11eb-981f-0354408e24fd.png)
 
-## Filters on query params
-![image](https://user-images.githubusercontent.com/31080020/97808151-3929ba80-1c8b-11eb-8c2e-0112260a92cf.png)
-
-## For min Width 700px
+## For min-width 700px
 ![image](https://user-images.githubusercontent.com/31080020/98437090-aa42f500-2105-11eb-80d2-e9d9e3c1852c.png)
 
 ## For min-width 1024px
 ![image](https://user-images.githubusercontent.com/31080020/98437126-ea09dc80-2105-11eb-8771-16cbc4adb8ea.png)
 
-## For min-width 1440
+## For min-width 1440px
 ![image](https://user-images.githubusercontent.com/31080020/98437188-4e2ca080-2106-11eb-8548-3abd90e32481.png)
 
 ## Approach Used
