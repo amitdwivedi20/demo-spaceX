@@ -1,18 +1,23 @@
-
-<div class="row" role="banner">
-  <h1>SpaceX launch Programs</h1>
-</div>
-<div clas="row">
-  <div class="col-2 col-s-2 col-lg-2">
-    <div class="sidebar" role="navigation">
-      <app-filters></app-filters>
+<div class="wrapper">
+  <div class="header" role="banner"><h1>SpaceX launch Programs</h1></div>
+  <div class="content" role="main">
+    <div>
+      <div class="main-content">
+        <div clas="row">
+          <div class="col-2 col-s-2 col-lg-2">
+            <div class="sidebar" role="navigation">
+              <app-filters></app-filters>
+            </div>
+          </div>
+          <div class="col-10 col-s-10 col-lg-10">
+            <div class="content" role="main">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="col-10 col-s-10 col-lg-10">
-    <div class="content" role="main">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+  <div class="footer" role="contentinfo"> <p><strong>Developed By:</strong> Amit Kumar</p></div>
 </div>
-
 

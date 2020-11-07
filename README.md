@@ -31,17 +31,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/31080020/98221825-23134700-1f76-11eb-97ca-42217ea8e653.png)
 ![image](https://user-images.githubusercontent.com/31080020/98221906-36bead80-1f76-11eb-981f-0354408e24fd.png)
 
-## Mobile View Landscape
-![image](https://user-images.githubusercontent.com/31080020/98221628-e34c5f80-1f75-11eb-848c-6b582393d51d.png)
-
 ## Filters on query params
 ![image](https://user-images.githubusercontent.com/31080020/97808151-3929ba80-1c8b-11eb-8c2e-0112260a92cf.png)
 
-## Desktop View 
-![image](https://user-images.githubusercontent.com/31080020/98222068-6077d480-1f76-11eb-90f1-c1434012aed8.png)
+## For min Width 700px
+![image](https://user-images.githubusercontent.com/31080020/98437090-aa42f500-2105-11eb-80d2-e9d9e3c1852c.png)
 
-## For Larger screens
-![image](https://user-images.githubusercontent.com/31080020/98222219-8a30fb80-1f76-11eb-8e58-572c2c91dd5a.png)
+## For min-width 1024px
+![image](https://user-images.githubusercontent.com/31080020/98437126-ea09dc80-2105-11eb-8771-16cbc4adb8ea.png)
+
+## For min-width 1440
+![image](https://user-images.githubusercontent.com/31080020/98437188-4e2ca080-2106-11eb-8548-3abd90e32481.png)
 
 ## Approach Used
 Application is being rendered server side using Angular Universal. Root app i.e. `app.component.ts` is responsible for loading both the `landing-page` and `Filter` side by side. Filter component emits  the values selected by the user using angular `subscription` which is being listened by landing-page which in turn calls the service and gets the desired data.
